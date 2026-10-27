@@ -1,0 +1,705 @@
+/* ==========================================================================
+   EXPENSEIQ TRANSACTIONS & QUEST FORGE STYLES (GAMIFIED)
+   ========================================================================== */
+
+.transactions-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px 60px;
+  color: var(--text);
+}
+
+.transactions-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 28px;
+}
+
+.heading-stats-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  box-shadow: var(--card-shadow);
+}
+
+.h-stat small {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.h-stat strong {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.h-stat-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+}
+
+/* ================= THE ALCHEMIST'S TRANSMUTATION FORGE ================= */
+.entry-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr);
+  gap: 22px;
+  margin-bottom: 36px;
+}
+
+.alchemist-forge-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(245, 158, 11, 0.05), var(--surface));
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 26px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.forge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.forge-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.forge-flame {
+  font-size: 24px;
+  animation: pulseDot 1s infinite alternate;
+}
+
+.forge-title-row h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.forge-status-tag {
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #10b981;
+  background: var(--income-bg);
+  padding: 3px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Game Stance Switcher */
+.game-stance-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background: var(--surface-alt);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 22px;
+  border: 1px solid var(--border);
+}
+
+.game-stance-switch button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-stance-switch button.active-debit {
+  background: linear-gradient(135deg, #f43f5e, #be123c);
+  color: white;
+  box-shadow: 0 3px 12px var(--expense-glow);
+}
+
+.game-stance-switch button.active-income {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 3px 12px var(--income-glow);
+}
+
+/* Arcade Digital Counter */
+.counter-group {
+  margin-bottom: 20px;
+}
+
+.counter-group label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.arcade-display-screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #060911;
+  border: 2px solid rgba(99, 102, 241, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.arcade-currency {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: #f59e0b;
+  margin-right: 8px;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+}
+
+.arcade-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 800;
+  color: #10b981;
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+}
+
+/* Arcade Coin Thrower */
+.arcade-coin-thrower {
+  margin-top: 10px;
+}
+
+.coin-thrower-hint {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-subtle);
+  margin-bottom: 6px;
+}
+
+.coin-buttons-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.coin-chip {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid var(--border);
+}
+
+.coin-chip:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.coin-chip.copper { background: rgba(180, 83, 9, 0.2); color: #f59e0b; border-color: rgba(180, 83, 9, 0.4); }
+.coin-chip.silver { background: rgba(148, 163, 184, 0.2); color: #cbd5e1; border-color: rgba(148, 163, 184, 0.4); }
+.coin-chip.gold { background: rgba(234, 179, 8, 0.2); color: #eab308; border-color: rgba(234, 179, 8, 0.5); }
+.coin-chip.platinum { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border-color: rgba(59, 130, 246, 0.5); }
+.coin-chip.royal { background: rgba(168, 85, 247, 0.2); color: #c084fc; border-color: rgba(168, 85, 247, 0.5); }
+.coin-chip.reset { background: var(--surface-hover); color: var(--text-muted); }
+
+/* Rune Spell Glyphs (Category Selection) */
+.category-group {
+  margin-bottom: 20px;
+}
+
+.category-group label {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.rune-glyphs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.rune-glyph-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rune-glyph-card:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.rune-glyph-card.selected-glyph {
+  background: var(--surface);
+  border-color: var(--glyph-color);
+  box-shadow: 0 0 14px var(--glyph-color);
+}
+
+.rune-icon {
+  font-size: 16px;
+}
+
+.rune-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.game-form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.game-form-input:focus {
+  border-color: var(--primary);
+  background: var(--surface);
+}
+
+.form-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 12px;
+}
+
+.cancel-btn {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.forge-submit-btn {
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--primary), #4338ca);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 18px var(--primary-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.forge-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px var(--primary-glow);
+}
+
+/* ================= HOLOGRAPHIC PREVIEW & RADAR ================= */
+.preview-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hologram-preview-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(16, 185, 129, 0.08), var(--surface));
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.preview-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.preview-dynamic-amt {
+  font-family: var(--font-heading);
+  margin: 6px 0 4px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.preview-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.preview-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+}
+
+.preview-row span {
+  color: var(--text-muted);
+}
+
+.game-status-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.budget-item {
+  margin-bottom: 14px;
+}
+
+.budget-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 11px;
+}
+
+.budget-name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.budget-vals {
+  color: var(--text-muted);
+}
+
+.progress-track {
+  height: 6px;
+  background: var(--surface-hover);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--income);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.warning { background: var(--amber); }
+.progress-fill.over { background: var(--expense); }
+
+.budget-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 9px;
+  color: var(--text-subtle);
+}
+
+.over-budget-tag {
+  font-size: 8px;
+  font-weight: 800;
+  color: var(--expense);
+  background: var(--expense-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ================= CHRONICLE OF QUESTS & RARITY LEDGER ================= */
+.all-transactions-section {
+  margin-top: 10px;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.guild-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+}
+
+.guild-export-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.game-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.rarity-filter-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.rarity-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.rarity-chip:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.rarity-chip.active-rarity {
+  background: var(--surface-hover);
+  border-color: var(--primary);
+  color: var(--text);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+.chip-legendary.active-rarity { border-color: #f59e0b; color: #f59e0b; }
+.chip-epic.active-rarity { border-color: #a855f7; color: #c084fc; }
+.chip-rare.active-rarity { border-color: #3b82f6; color: #60a5fa; }
+
+/* Quest Rows Feed */
+.transactions-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.8fr);
+  gap: 20px;
+}
+
+.game-list-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--card-shadow);
+}
+
+.quest-rows-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quest-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.quest-table-row:hover {
+  background: var(--surface-hover);
+  transform: translateX(3px);
+}
+
+/* Rarity Tiers */
+.rarity-legendary {
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.15);
+}
+
+.rarity-epic {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15);
+}
+
+.rarity-rare {
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.rarity-common {
+  border-color: var(--border);
+}
+
+.quest-row-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quest-row-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.icon-income {
+  background: var(--income-bg);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.icon-expense {
+  background: var(--expense-bg);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.quest-row-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.quest-row-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.quest-row-title-row strong {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.rarity-badge-mini {
+  font-size: 8px;
+  font-weight: 900;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.rarity-badge-mini.rarity-legendary { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+.rarity-badge-mini.rarity-epic { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+.rarity-badge-mini.rarity-rare { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+.rarity-badge-mini.rarity-common { background: var(--surface-hover); color: var(--text-muted); }
+
+.quest-row-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.quest-row-note {
+  font-style: italic;
+  color: var(--text-subtle);
+}
+
+.quest-row-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.quest-row-amt {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.quest-delete-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-subtle);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quest-delete-btn:hover {
+  background: rgba(244, 63, 94, 0.2);
+  color: var(--expense);
+}
+
+.game-summary-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 1024px) {
+  .entry-section,
+  .transactions-content {
+    grid-template-columns: 1fr;
+  }
+  .rune-glyphs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
